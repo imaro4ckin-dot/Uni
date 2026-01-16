@@ -1,14 +1,16 @@
+package lesson1;
+
 public class MatrixMultiplication {
-    public static void multiply (String[] args) {
+    public static void main (String[] args) {
         int[][] A = {
-            {1, 2, 3},
-            {4, 5, 6}
+                {1, 2, 3},
+                {4, 5, 6}
         };
 
         int[][] B = {
-            {7, 8},
-            {9, 10},
-            {11, 12}
+                {7, 8},
+                {9, 10},
+                {11, 12}
         };
 
         // Result matrix
@@ -17,10 +19,10 @@ public class MatrixMultiplication {
         int colsB = B[0].length;   // Number of columns in B
         int[][] C = new int[rowsA][colsB];
 
-     
-        for (int i = 0; i < rowsA; i++) {        
-            for (int j = 0; j < colsB; j++) {    
-                for (int k = 0; k < colsA; k++) { 
+
+        for (int i = 0; i < rowsA; i++) {
+            for (int j = 0; j < colsB; j++) {
+                for (int k = 0; k < colsA; k++) {
                     C[i][j] += A[i][k] * B[k][j];
                 }
             }
